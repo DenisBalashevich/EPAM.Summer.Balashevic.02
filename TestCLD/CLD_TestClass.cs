@@ -37,28 +37,5 @@ namespace TestCLD
 
             Assert.AreEqual(arrange, act);
         }
-
-        [TestMethod]
-        public void CommonDenominator_EuclidianAlgorithm_Positive()
-        {
-            int arrange = 5;
-            int x = 5, y = 25;
-            var del = new CommonLeastDenominator.CLDDelegate(CommonLeastDenominator.EuclidianAlgorithm);
-            int act = CommonLeastDenominator.CommonDenominator(del, x, y);
-            Assert.AreEqual(arrange, act);
-        }
-
-        [TestMethod]
-        public void CommonDenominator_SteinsAlgorithm_Positive()
-        {
-            int arrange = 5;
-            int x = 5, y = 25;
-            var del = new CommonLeastDenominator.CLDDelegate(CommonLeastDenominator.SteinsAlgorithm);
-            int act = CommonLeastDenominator.CommonDenominator(del, x, y);
-            Assert.AreEqual(arrange, act);
-        }
-
-
-
     }
 }

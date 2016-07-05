@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
-
-namespace CommonLeastDenominatorSpace
+namespace CommonDenominator
 {
     public static class CommonLeastDenominator
     {
@@ -50,6 +49,8 @@ namespace CommonLeastDenominatorSpace
         }
         public static int SteinsAlgorithm(int a, int b)
         {
+            a = Math.Abs(a);
+            b = Math.Abs(b);
             if (a < 0)
                 return Math.Abs(a);
             if (b < 0)
@@ -88,7 +89,7 @@ namespace CommonLeastDenominatorSpace
             var del = new CLDDelegate(SteinsAlgorithm);
             return CommonDenominator(SteinsAlgorithm, arr);
         }
-        public static int SteinsAlgorithmTime( out long time, params int[] arr)
+        public static int SteinsAlgorithmTime(out long time, params int[] arr)
         {
             var del = new CLDDelegate(SteinsAlgorithm);
             Stopwatch timeWork = new Stopwatch();
